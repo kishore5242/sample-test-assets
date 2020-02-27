@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1579694011450" createdUser="KATHERINE.CARROLL" id="6ac16383:16fcd0d2916:-7e54" type="test_resource" updatedTimestamp="1579694211561" updatedUser="KATHERINE.CARROLL" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="6ac16383:16fcd0d2916:-7ddc" selfDescribing="Choose evaluation expressions to determine test execution flow. Use predefined functions, custom plug-ins and tagged data. If the functions pass then the test will continue to execute; otherwise the test will fail." type="assert_true_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="and( tags[&quot;dessert&quot;] == &quot;peanut butter pie&quot;, tags[&quot;drink&quot;] == &quot;whiskey&quot;, tags[&quot;music&quot;] == &quot;country&quot;)" option="OTHER" script="and( tags[&quot;dessert&quot;] == &quot;peanut butter pie&quot;, tags[&quot;drink&quot;] == &quot;whiskey&quot;, tags[&quot;music&quot;] == &quot;country&quot;)" type="script:ECMAScript"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE"/>
+      <testprops messageClearance="false"/>
+   </resourceConfig>
+</editableResource>

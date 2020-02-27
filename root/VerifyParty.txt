@@ -1,0 +1,23 @@
+Branching Project Steps for verification
+Simplest test  PartySuite
+
+categories: 	dessert, drink, music
+default     	fruit, water, jazz
+party1 		peanut butter pie, whiskey, country 
+party2		tiramisu, espresso, classical
+party3 		cake, koolaid, jukebox
+
+-- look for overriden enviroment variables in Results ---
+-- use Results Gallery to check that the reports and the test console show same vale for music, food, drink --	
+Runtests -environment local -project D:\workYYY\Branching\Branching.ghp -run PartySuite   (default)
+Runtests -environment local -project D:\workYYY\Branching\Branching.ghp -input  D:\workYYY\Branching\Party1.properties -run PartySuiteInput1
+Runtests -environment local -project D:\workYYY\Branching\Branching.ghp -input  D:\workYYY\Branching\Party2.properties -run PartySuiteInput2
+Runtests -environment local -project D:\workYYY\Branching\Branching.ghp -input  D:\workYYY\Branching\MoreParties\Party3.properties -run PartySuiteInput3
+
+On Sunrise ... use the Execution dialog's variable tab to pass in partyX.properties
+  1. add dessert, drink, music by hand
+  2. import file from server   (shows *.properties and .prop files)
+  3. import file from local system
+
+
+

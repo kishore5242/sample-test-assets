@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1558527558230" createdUser="KATHERINE.CARROLL" id="4be0d0b4:16adf73ff89:-7e49" selfDescribing="A File located somewhere" type="file_contents_transport" updatedTimestamp="1558527588408" updatedUser="KATHERINE.CARROLL" version="1.0">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig transportName="" transportTemplateName="File">
+      <_c directory="%%PROJECT/ROOT_DIRECTORY%%/Outgoing/" encoding="UTF-8" fileNamePattern="" ignoreLastModification="false" lastModificationDelay="0" newLineChoice="Native" packetiserType="AllAvailableBytes" writeEnabled="false"/>
+   </resourceConfig>
+</editableResource>

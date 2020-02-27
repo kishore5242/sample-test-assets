@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1559212747365" createdUser="ibmadmin" id="-7863ada:16b08510c26:-7e82" type="test_resource" updatedTimestamp="1559213255036" updatedUser="ibmadmin" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-7863ada:16b08510c26:-7e2b" selfDescribing="Use the current row of test data to populate tag values." type="test_data_fetch_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig advCursor="true" description="" name="from &quot;MyData_05, advance to the next row">
+               <tdsref id="4be0d0b4:16adf73ff89:-7876" lkname="MyData_05" lkpath="TonsOfData/alpha/MyData_05" type="simple_test_data"/>
+               <mapper disableFiltersWhenEmpty="false" knownColumns="myFieldB,myFieldC,myFieldA" noAutoMap="myFieldB,myFieldC,myFieldA">
+                  <mapping columnName="myFieldA" tagName="myFieldA" type="4"/>
+                  <mapping columnName="myFieldB" tagName="myFieldB" type="4"/>
+                  <mapping columnName="myFieldC" tagName="myFieldC" type="4"/>
+               </mapper>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="-7863ada:16b08510c26:-7d10" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="%%myFieldA%% %%myFieldB%% %%myFieldC%% %%TEST/NAME%%" flush="true" loggingMessage="%%myFieldA%% %%myFieldB%% %%myFieldC%% %%TEST/NAME%%" name="%%myFieldA%% %%myFieldB%% %%myFieldC%% %%TEST/NAME%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-7863ada:16b08510c26:-7bb9" selfDescribing="Choose evaluation expressions to determine test execution flow. Use predefined functions, custom plug-ins and tagged data. If the functions pass then the test will continue to execute; otherwise the test will fail." type="assert_true_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="myFieldC != &quot;&quot;" option="OTHER" script="myFieldC != &quot;&quot;" type="script:ECMAScript"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="myFieldB"/>
+         <tag defaultValue="" description="" name="myFieldC"/>
+         <tag defaultValue="" description="" name="myFieldA"/>
+      </tagDataStore>
+      <testprops messageClearance="false"/>
+   </resourceConfig>
+</editableResource>

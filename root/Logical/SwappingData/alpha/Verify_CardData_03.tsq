@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1574443241194" createdUser="KATHERINE.CARROLL" id="-289d7d4d:16e94172897:-7d0e" type="test_resource" updatedTimestamp="1574443700078" updatedUser="KATHERINE.CARROLL" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="4be0d0b4:16adf73ff89:-7cb1" selfDescribing="Choose a transport and formatter on which to receive and validate a message." type="subscribe_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" formatter="GH Text" name="&quot;Text&quot; to file &quot;%%PROJECT/ROOT_DIRECTORY%%/Outgoing/Process_CardData_03&quot; using schema &quot;Text&quot; via &quot;DumpFile&quot;" transport="4be0d0b4:16adf73ff89:-7e49">
+               <headerMessage assocdefid="File Subscribe" meTy="Message" name="" sch="File Subscribe" type="12" version="1.2">
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+                  <_c meTy="Date-Time" name="rcvdTimestamp" sch="File Subscribe" type="11" version="1.2"/>
+                  <_c meTy="String" name="directory" sch="File Subscribe" type="7" version="1.2"/>
+                  <_c meTy="String" name="fileName" sch="File Subscribe" type="7" version="1.2"/>
+                  <_c meTy="String" name="fullPath" sch="File Subscribe" type="7" version="1.2"/>
+                  <_c meTy="Date-Time" name="lastModified" sch="File Subscribe" type="11" version="1.2"/>
+                  <_c meTy="Long" name="fileSize" sch="File Subscribe" type="3" version="1.2"/>
+               </headerMessage>
+               <subconfig _version="1.1" deleteAfterProcessing="true" fileName="%%PROJECT/ROOT_DIRECTORY%%/Outgoing/Process_CardData_03" formatter="GH Text" ignoreExisting="false" retryInterval="10000" transport="4be0d0b4:16adf73ff89:-7e49"/>
+               <bodyMessage assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+                  <fieldActionGroup>
+                     <fieldAction type="1">
+                        <fieldAction anyOrder="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+                  <_c name="text" sch="Text" type="7" value="4525 4525 4525 4525 Process_CardData_03&#13;&#10;9511 9511 9511 9511 Process_CardData_03&#13;&#10;5507 5507 5507 5507 Process_CardData_03" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="1">
+                           <fieldAction exp="4525 4525 4525 4525 Process_CardData_03&#13;&#10;9511 9511 9511 9511 Process_CardData_03&#13;&#10;5507 5507 5507 5507 Process_CardData_03" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+               </bodyMessage>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE"/>
+      <testprops messageClearance="false"/>
+   </resourceConfig>
+</editableResource>

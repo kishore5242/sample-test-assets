@@ -1,0 +1,55 @@
+TestData
+  CardData_03		xlxs	1x3	Number
+  CardCSV_03		csv 	1x3	Number
+  MyExcelData_02	xlxs	3x2	myFieldA,myFieldB,myFieldC
+  MyData_01		csv	3x1	myFieldA,myFieldB,myFieldC
+  MyData_02		csv	3x2	myFieldA,myFieldB,myFieldC
+  MyData_03		csv	3x3	myFieldA,myFieldB,myFieldC
+  MyData_04		csv	3x4	myFieldA,myFieldB,myFieldC
+  MyData_05		csv	3x5	myFieldA,myFieldB,myFieldC
+  generatedFilenames	csv	2X8	index,outgoingName
+
+
+myFieldA,myFieldB,myFieldC
+1,aValue01_B,aValue01_C
+2,aValue02_B,aValue02_C
+3,aValue03_B,aValue03_C
+4,aValue04_B,aValue04_C
+5,aValue05_B,aValue05_C
+
+MyExcelData
+1,thanksgiving,turkey
+2,christmas,gifts
+
+Version 10.0.2 ... Xcel datasets don't show up CardData_03 and MyExcelData_02
+
+Dataset_Alpha_Suite  
+	does: iterates thru dataset loging each row to output file then verifies each file
+	used: generatedFilenames, MyData_01 - myData_05
+	swap: use MyData_02 for MyData_04  VerifyMyData_04 should fail  (note console log informs of override)
+
+Dataset_Card_Suite
+	does: iterates thru dataset loging each row to output file then verifies each file
+	used: generatedFilenames, CardCSV_03
+	swap: nothing matches
+
+Dataset_CardExcel_Suite
+	does: iterates thru dataset loging each row to output file then verifies each file
+	used: generatedFilenames, CardData_03
+	swap: CardCSV_03 ... runs green   (note console log informs of override)
+
+Dataset_Fetch_Suite  
+	does: uses fetch data 5 times and advance to next row
+	used: MyData_05
+	swap: use MyData_01 for MyData_05   (note console log informs of override) fetch 2-5 are red
+
+Dataset_Holiday_Suite
+	does: iterates thru dataset loging each row to output file then verifies each file
+	used: generatedFilenames, MyExcelData_02
+	swap: use MyData_02 for MyExcelData_02  Verify_ExcelData_02 should fail  (note console log informs of override)
+
+Dataset_Lookup_Suite
+	does: looks up row 3 in MyData_05
+	used: MyData_05
+	swap: MyData_02 for MyData_05  LookupData should fail  (note console log informs of override)
+

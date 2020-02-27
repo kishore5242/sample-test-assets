@@ -1,0 +1,13 @@
+make branch aa off master
+   create AA_PartySuite from PartySuite
+   create PartyAA.property file from Party1 (append AA to values)
+   create VerifyPartyAA from VerifyPart1  
+   create PartySuiteInputAA from PartySuiteInput1 (hook in above)
+   create AA_MyData_05 from MyData_05
+
+make branch zz off master
+   create ZZ_PartySuite from PartySuite
+   create PartyZZ.property file from Party1 (append ZZ to values)
+   create VerifyPartyZZ from VerifyPart1  
+   create PartySuiteInputZZ from PartySuiteInput1 (hook in above)
+   create ZZ_MyData_05 from MyData_05  (append ZZ to values)

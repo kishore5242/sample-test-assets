@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1568286321902" createdUser="KATHERINE.CARROLL" id="3c71d520:16d25244885:-7ec0" type="test_resource" updatedTimestamp="1579703865575" updatedUser="KATHERINE.CARROLL" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="3c71d520:16d25244885:-7e6b" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="This is the menu:&#13;&#10;    dessert:  %%dessert%%&#13;&#10;    drink:    %%drink%%&#13;&#10;    music:    %%music%%&#13;&#10;    venue:    %%SUITE/NAME%%.&#13;&#10;You can override these with variable file." name="This is the menu:" outputFile="" role="1"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE"/>
+      <testprops messageClearance="false"/>
+   </resourceConfig>
+</editableResource>
